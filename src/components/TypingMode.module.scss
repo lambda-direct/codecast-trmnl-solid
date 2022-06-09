@@ -1,0 +1,78 @@
+.root {
+	display: flex;
+	flex-direction: column nowrap;
+}
+
+.input-row {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-start;
+	background-color: rgb(6, 24, 44);
+	width: 100%;
+
+	.input {
+		flex: 1;
+		padding: 14px 10px;
+		box-sizing: border-box;
+		min-height: 48px;
+		word-break: break-all;
+
+		&[contenteditable] {
+			outline: 0px solid transparent;
+		}
+	}
+
+	.duration-wrapper {
+		position: relative;
+	}
+
+	button {
+		all: unset;
+		flex: 0;
+		margin: 5px;
+		padding: 10px;
+		background-color: rgb(7, 30, 56);
+		cursor: pointer;
+		text-align: center;
+		border-radius: 2px;
+
+		&:hover {
+			color: white;
+			background-color: rgb(31, 111, 235);
+		}
+	}
+
+	.duration-dropdown {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		border-radius: 5px;
+		background-color: rgb(22, 27, 34);
+		border: solid 1px rgb(48, 54, 61);
+		transform: translateY(100%);
+		border-radius: 5px;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: stretch;
+
+		.item {
+			all: unset;
+			padding: 5px 15px;
+			cursor: pointer;
+			&:hover {
+				color: white;
+				background-color: rgb(31, 111, 235);
+			}
+		}
+
+		.item:first-child {
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+
+		.item:last-child {
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+	}
+}
